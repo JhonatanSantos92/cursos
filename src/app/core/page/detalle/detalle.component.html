@@ -1,0 +1,15 @@
+<app-navbar
+    [brand]="brand"
+    [logo]="logo">
+</app-navbar>
+<div class="colorFondo">
+    <div class="container espacio">
+        <div *ngFor="let detalle of detalleCurso">
+            <app-card-detalle 
+                [title]="detalle.title"
+                [section]="detalle.section" 
+                [listaclases]="detalle.classes">
+            </app-card-detalle>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<app-navbar
+    [brand]="brand"
+    [logo]="logo">
+</app-navbar>
+<div class="colorFondo">
+    <div class="container" >
+        <div class="row">
+            <div
+                *ngFor="let curso of cursos"
+                class="col-12 col-sm-6 col-md-4 col-xl-3">
+                <app-card
+                    [imagenCurso]="curso.img"
+                    [title]="curso.title"
+                    [instructor]="curso.instructor"
+                    [progress]="curso.progress"
+                    (goCursoDetalle)="irCursoDetalle(curso.id)">
+                </app-card>
+            </div>
+        </div>
+    </div>
+</div>
